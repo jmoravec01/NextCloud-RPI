@@ -1,0 +1,43 @@
+# using newer version of docker compose
+version: "2"
+
+services:
+  db:
+    # image right from docker
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - MYSQL:/var/lib/mysql
+
+  nextcloud:
+    # image right from docker
+    image: nextcloud:25
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - NEXTCLOUD:/var/www/html
+      - ./config:/var/www/html/config
+    depends_on:
+      - db
+    # making local network public (tunnel)
+  ngrok:
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    ports:
+      - 80:80
+
+volumes:
+  MYSQL:
+  NEXTCLOUD:
