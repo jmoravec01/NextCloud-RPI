@@ -34,7 +34,8 @@ We will be using [ngrok](https://ngrok.com/) for accessing data from everywhere.
 2. open terminal in this folder (right click in Windows - open in terminal)
 3. `git clone https://github.com/jmoravec01/NextCloud-RPI.git`
 4. `cd NextCloud-RPI/`
-5. `docker compose up -d`
+5. setup [.env](env_file.md) file
+6. `docker compose up -d`
 
 ## HOW TO CONNECT
 
