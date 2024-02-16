@@ -24,10 +24,13 @@ services:
       - ./config:/var/www/html/config
     depends_on:
       - db
-    # making local network public (tunnel)
+
+  # making local network public (tunnel)
   ngrok:
     image: ngrok/ngrok:latest
     restart: unless-stopped
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
     command:
       - "start"
       - "--all"
@@ -36,7 +39,7 @@ services:
     volumes:
       - ./ngrok.yml:/ngrok.yml
     ports:
-      - 8080:80
+      - 80:80
 
 volumes:
   MYSQL:
