@@ -1,7 +1,7 @@
-auth_token: $NGROK_AUTHTOKEN
+auth_token: ${NGROK_AUTHTOKEN}
 
 tunnels:
   https:
     proto: https
-    addr: 192.168.0.172:80
+    addr: localhost:80
     region: eu
