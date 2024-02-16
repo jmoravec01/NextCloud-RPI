@@ -32,9 +32,9 @@ services:
       - "start"
       - "--all"
       - "--config"
-      - "/etc/ngrok.yml"
+      - "./ngrok.yml"
     volumes:
-      - ./ngrok.yml:/etc/ngrok.yml
+      - ./ngrok.yml:./ngrok.yml
     ports:
       - 8080:80
 
