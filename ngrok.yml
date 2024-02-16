@@ -5,4 +5,3 @@ tunnels:
   https:
     proto: http
     addr: localhost:80
-    region: eu
