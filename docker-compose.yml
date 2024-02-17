@@ -30,7 +30,7 @@ services:
     image: ngrok/ngrok:latest
     restart: unless-stopped
     environment:
-      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
     command:
       - "start"
       - "--all"

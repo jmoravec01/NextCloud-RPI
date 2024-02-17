@@ -35,7 +35,7 @@ We will be using [ngrok](https://ngrok.com/) for accessing data from everywhere.
 3. `git clone https://github.com/jmoravec01/NextCloud-RPI.git`
 4. `cd NextCloud-RPI/`
 5. setup [.env](env_file.md) file
-6. THIS STEP IS FOR PUBLIC ACCESS -> swap "your_ngrok_authtoken" in **ngrok.yml** with your **ngrok token** - you can claim it after registration on this [link](https:// dashboard.ngrok.com/get-started/your-authtoken)
+6. THIS STEP IS FOR PUBLIC ACCESS -> swap "**your_ngrok_authtoken**" in **ngrok.yml** with your **ngrok token** - you can claim it after registration on this [link](https://dashboard.ngrok.com/get-started/your-authtoken)
 7. `docker compose up -d`
 
 ## HOW TO CONNECT
