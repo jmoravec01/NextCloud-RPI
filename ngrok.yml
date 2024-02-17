@@ -1,5 +1,5 @@
 version: 2
-authtoken: ${NGROK_AUTHTOKEN}
+authtoken: your_ngrok_athtoken
 
 tunnels:
   https:
