@@ -4,4 +4,4 @@ authtoken: ${NGROK_AUTHTOKEN}
 tunnels:
   https:
     proto: http
-    addr: 192.168.0.172:80
+    addr: localhost:80
