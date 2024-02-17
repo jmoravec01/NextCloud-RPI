@@ -39,7 +39,7 @@ services:
     volumes:
       - ./ngrok.yml:/ngrok.yml
     ports:
-      - 4040:4040
+      - "4040:4040"
 
 volumes:
   MYSQL:
