@@ -1,7 +1,0 @@
-version: 2
-authtoken: your_ngrok_athtoken
-
-tunnels:
-  https:
-    proto: http
-    addr: localhost:80
